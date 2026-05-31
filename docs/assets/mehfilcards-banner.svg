@@ -1,0 +1,80 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">MehfilCards digital invitation platform banner</title>
+  <desc id="desc">A premium banner showing a digital invitation card, QR verification, and admin controls.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071f1a"/>
+      <stop offset="0.52" stop-color="#123d45"/>
+      <stop offset="1" stop-color="#5b457c"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f7d77a"/>
+      <stop offset="1" stop-color="#c9952d"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#0a2a25"/>
+      <stop offset="0.7" stop-color="#123d34"/>
+      <stop offset="1" stop-color="#d8b45f"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" rx="34" fill="url(#bg)"/>
+  <path d="M0 460C190 385 360 420 536 470C762 535 963 526 1280 384V640H0V460Z" fill="#07171a" fill-opacity="0.34"/>
+  <path d="M1040 88C1122 143 1132 242 1067 304C1002 366 895 354 850 279C805 204 859 86 954 70C983 65 1014 70 1040 88Z" fill="#ffffff" fill-opacity="0.06"/>
+  <path d="M179 506C101 462 92 367 154 309C216 251 316 263 358 332C400 401 349 510 260 524C232 528 203 522 179 506Z" fill="#ffffff" fill-opacity="0.06"/>
+
+  <g transform="translate(88 92)">
+    <rect x="0" y="0" width="74" height="74" rx="20" fill="url(#gold)"/>
+    <text x="37" y="50" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="900" fill="#ffffff">M</text>
+    <text x="96" y="32" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="900" fill="#ffffff">MehfilCards</text>
+    <text x="96" y="62" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#c9d8d4">Digital invitations, greeting cards, and event QR verification</text>
+  </g>
+
+  <g transform="translate(88 222)">
+    <text font-family="Georgia, serif" font-size="78" font-weight="700" fill="#ffffff">
+      <tspan x="0" y="0">Create beautiful</tspan>
+      <tspan x="0" y="88">event invites</tspan>
+    </text>
+    <text x="0" y="210" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600" fill="#d8e8e5">
+      Festivals, weddings, parties, custom occasions, admin templates, PNG cards, and live QR scans.
+    </text>
+    <g transform="translate(0 264)">
+      <rect width="182" height="48" rx="14" fill="url(#gold)"/>
+      <text x="91" y="31" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="900" fill="#101519">Laravel 12</text>
+      <rect x="198" width="188" height="48" rx="14" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.2"/>
+      <text x="292" y="31" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="900" fill="#ffffff">QR Verified</text>
+      <rect x="402" width="182" height="48" rx="14" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.2"/>
+      <text x="493" y="31" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="900" fill="#ffffff">Admin Ready</text>
+    </g>
+  </g>
+
+  <g transform="translate(824 82)" filter="url(#shadow)">
+    <rect x="0" y="0" width="316" height="476" rx="26" fill="#f8f3e8"/>
+    <rect x="24" y="24" width="268" height="428" rx="18" fill="url(#card)"/>
+    <rect x="46" y="48" width="74" height="74" rx="8" fill="#ffffff"/>
+    <rect x="56" y="58" width="18" height="18" fill="#101519"/>
+    <rect x="88" y="58" width="18" height="18" fill="#101519"/>
+    <rect x="56" y="90" width="18" height="18" fill="#101519"/>
+    <rect x="86" y="88" width="8" height="8" fill="#101519"/>
+    <rect x="98" y="100" width="8" height="8" fill="#101519"/>
+    <rect x="82" y="108" width="8" height="8" fill="#101519"/>
+    <path d="M224 78C199 91 192 122 209 144C227 167 262 163 275 139C242 150 211 119 224 78Z" fill="url(#gold)"/>
+    <text x="158" y="224" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#fff8e8">Eid Mubarak</text>
+    <text x="158" y="268" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#ffffff">Ayaan Family</text>
+    <text x="158" y="304" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#f6ead0">Hosted by Khan Family</text>
+    <text x="158" y="354" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#f6ead0">QR verified dinner invite</text>
+    <rect x="54" y="388" width="208" height="1" fill="#ffffff" fill-opacity="0.36"/>
+  </g>
+
+  <g transform="translate(706 420)">
+    <rect width="132" height="74" rx="18" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="66" y="34" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" fill="#ffffff">18+</text>
+    <text x="66" y="56" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" fill="#d8e8e5">Occasions</text>
+    <rect x="150" width="132" height="74" rx="18" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="216" y="34" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" fill="#ffffff">PNG</text>
+    <text x="216" y="56" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" fill="#d8e8e5">Download</text>
+  </g>
+</svg>
