@@ -14,8 +14,9 @@ fi
 # Make sure the SQLite database file exists when using the sqlite driver.
 if [ "${DB_CONNECTION:-sqlite}" = "sqlite" ]; then
     : "${DB_DATABASE:=/var/www/html/database/database.sqlite}"
+    mkdir -p "$(dirname "$DB_DATABASE")"
     [ -f "$DB_DATABASE" ] || touch "$DB_DATABASE"
-    chown www-data:www-data "$DB_DATABASE" 2>/dev/null || true
+    chown -R www-data:www-data "$(dirname "$DB_DATABASE")" 2>/dev/null || true
 fi
 
 php artisan config:clear
