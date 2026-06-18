@@ -1,7 +1,7 @@
 #!/bin/sh
-# Startup script for the MehfilCards container.
+# Startup script for the MehfilCards container (Apache + mod_php).
 set -e
-cd /app
+cd /var/www/html
 
 # Ensure an environment file exists (platform env vars still take priority).
 [ -f .env ] || cp .env.example .env
@@ -13,12 +13,17 @@ fi
 
 # Make sure the SQLite database file exists when using the sqlite driver.
 if [ "${DB_CONNECTION:-sqlite}" = "sqlite" ]; then
-    : "${DB_DATABASE:=/app/database/database.sqlite}"
+    : "${DB_DATABASE:=/var/www/html/database/database.sqlite}"
     [ -f "$DB_DATABASE" ] || touch "$DB_DATABASE"
+    chown www-data:www-data "$DB_DATABASE" 2>/dev/null || true
 fi
 
 php artisan config:clear
 php artisan migrate --force
 
-# Bind to the port the host assigns (Render/Railway set $PORT), default 8000.
-exec php artisan serve --host=0.0.0.0 --port="${PORT:-8000}"
+# Make Apache listen on the port the host assigns (Render/Railway set $PORT).
+PORT="${PORT:-80}"
+sed -i "s/^Listen .*/Listen ${PORT}/" /etc/apache2/ports.conf
+sed -i "s/<VirtualHost \*:[0-9]*>/<VirtualHost *:${PORT}>/" /etc/apache2/sites-available/000-default.conf
+
+exec apache2-foreground
