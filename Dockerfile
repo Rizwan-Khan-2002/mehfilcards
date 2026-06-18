@@ -8,7 +8,7 @@ FROM php:8.2-cli
 
 # System libraries + PHP extensions
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        git unzip libzip-dev libpng-dev libjpeg-dev libfreetype6-dev libonig-dev \
+        git unzip libzip-dev libpng-dev libjpeg-dev libfreetype6-dev libonig-dev libsqlite3-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j"$(nproc)" gd zip pdo pdo_mysql pdo_sqlite mbstring bcmath \
     && rm -rf /var/lib/apt/lists/*
