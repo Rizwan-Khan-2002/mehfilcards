@@ -22,6 +22,11 @@ fi
 php artisan config:clear
 php artisan migrate --force
 
+# Seed categories, card templates, the demo invitation and an admin user.
+# The seeder is idempotent (updateOrCreate), so it is safe to run on every
+# boot — important because the free-tier SQLite database is ephemeral.
+php artisan db:seed --force || true
+
 # Make Apache listen on the port the host assigns (Render/Railway set $PORT).
 PORT="${PORT:-80}"
 sed -i "s/^Listen .*/Listen ${PORT}/" /etc/apache2/ports.conf
