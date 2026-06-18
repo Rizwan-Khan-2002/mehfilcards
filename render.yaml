@@ -1,0 +1,32 @@
+# Render Blueprint — one-click deploy for MehfilCards.
+# In Render: New + > Blueprint > connect the GitHub repo. Render reads this file.
+# Note: the free plan uses an ephemeral disk, so the SQLite database and any
+# uploaded template images reset on each redeploy. Fine for a demo/portfolio;
+# attach a Render Disk or use a managed DB for persistence.
+services:
+  - type: web
+    name: mehfilcards
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: APP_KEY
+        sync: false          # set this in the dashboard (php artisan key:generate value), or leave blank to auto-generate
+      - key: APP_URL
+        sync: false          # set to your https://<service>.onrender.com URL after first deploy
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: DB_DATABASE
+        value: /app/database/database.sqlite
+      - key: SESSION_DRIVER
+        value: database
+      - key: CACHE_STORE
+        value: database
+      - key: QUEUE_CONNECTION
+        value: database
+      - key: LOG_CHANNEL
+        value: stderr
