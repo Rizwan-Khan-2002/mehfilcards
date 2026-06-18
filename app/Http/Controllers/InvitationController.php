@@ -206,7 +206,7 @@ class InvitationController extends Controller
                 'event_name' => $invitation->event_name,
                 'occasion' => $invitation->occasion,
                 'date' => $invitation->event_date?->format('d M Y'),
-                'time' => $invitation->event_time ? Carbon::createFromFormat('H:i:s', $invitation->event_time)->format('h:i A') : null,
+                'time' => $this->formatTime($invitation->event_time) ?: null,
                 'venue' => $invitation->venue,
                 'whatsapp' => $invitation->whatsapp,
                 'message' => $invitation->message,

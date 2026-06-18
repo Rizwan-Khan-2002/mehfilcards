@@ -15,7 +15,7 @@
         <h1>{{ $invitation->event_name }}</h1>
         <div class="detail-list">
             <p><i class="fa-solid fa-user"></i><span>{{ $invitation->guest_name }}</span></p>
-            <p><i class="fa-solid fa-calendar-day"></i><span>{{ $invitation->event_date->format('d M Y') }} {{ $invitation->event_time ? \Carbon\Carbon::createFromFormat('H:i:s', $invitation->event_time)->format('h:i A') : '' }}</span></p>
+            <p><i class="fa-solid fa-calendar-day"></i><span>{{ $invitation->event_date->format('d M Y') }} {{ $invitation->event_time ? \Carbon\Carbon::parse($invitation->event_time)->format('h:i A') : '' }}</span></p>
             <p><i class="fa-solid fa-location-dot"></i><span>{{ $invitation->venue }}</span></p>
             <p><i class="fa-solid fa-hand-holding-heart"></i><span>Hosted by {{ $invitation->host_name }}</span></p>
         </div>
