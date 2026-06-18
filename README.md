@@ -82,9 +82,36 @@ Each invitation QR includes structured invite data:
 
 This makes the QR useful even during local development, where a phone may not always be able to reach a computer-only localhost address.
 
+## Prerequisites
+
+Make sure these are installed before running the project:
+
+| Tool | Version | Notes |
+| --- | --- | --- |
+| PHP | 8.2 or higher | With `gd`, `mbstring`, `pdo_mysql`, and `fileinfo` extensions enabled |
+| Composer | 2.x | PHP dependency manager |
+| Node.js | 18+ | For Vite asset build (`npm run dev` / `npm run build`) |
+| MySQL / MariaDB | 8.0 / 10.4+ | Create an empty database named `mehfilcards_laravel` |
+
+> On Windows the easiest way to get PHP + MySQL together is [XAMPP](https://www.apachefriends.org/) or [Laragon](https://laragon.org/). Install [Composer](https://getcomposer.org/) separately and reopen the terminal so `php` and `composer` are on your `PATH`.
+
+## Quick Start
+
+With the prerequisites in place, a single Composer script installs everything, builds assets, and runs migrations:
+
+```bash
+composer run setup
+```
+
+Then start the full dev environment (server + queue + logs + Vite) with:
+
+```bash
+composer run dev
+```
+
 ## Local Setup
 
-Install dependencies:
+Prefer to run the steps manually? Install dependencies:
 
 ```bash
 composer install
