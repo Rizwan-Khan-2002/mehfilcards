@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', config('app.name', 'MehfilCards'))</title>
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
@@ -23,7 +25,7 @@
 
         <div class="topbar">
             <a class="brand" href="{{ route('home') }}">
-                <span class="brand-mark">M</span>
+                <img class="brand-mark" src="{{ asset('favicon.png') }}" alt="MehfilCards logo">
                 <span>MehfilCards</span>
             </a>
             <nav class="nav-actions" aria-label="Main navigation">
