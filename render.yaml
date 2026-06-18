@@ -17,7 +17,7 @@ services:
       - key: APP_KEY
         sync: false          # set this in the dashboard (php artisan key:generate value), or leave blank to auto-generate
       - key: APP_URL
-        sync: false          # set to your https://<service>.onrender.com URL after first deploy
+        value: https://mehfilcards.onrender.com
       - key: DB_CONNECTION
         value: sqlite
       - key: DB_DATABASE
